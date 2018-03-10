@@ -13,6 +13,7 @@
 		5E2C0A00205423D80019888B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2C09FF205423D80019888B /* Assets.xcassets */; };
 		5E2C0A03205423D80019888B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2C0A01205423D80019888B /* LaunchScreen.storyboard */; };
 		5E2C0A0D205425EB0019888B /* STBookTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2C0A0C205425EB0019888B /* STBookTransition.swift */; };
+		5E6824842054715B00994CF5 /* bookTransition.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5E6824832054715B00994CF5 /* bookTransition.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5E2C0A02205423D80019888B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E2C0A04205423D80019888B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E2C0A0C205425EB0019888B /* STBookTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STBookTransition.swift; sourceTree = "<group>"; };
+		5E6824832054715B00994CF5 /* bookTransition.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = bookTransition.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		5E2C09F7205423D80019888B /* STBookTransition */ = {
 			isa = PBXGroup;
 			children = (
+				5E6824822054713B00994CF5 /* screenShot */,
 				5E2C0A0C205425EB0019888B /* STBookTransition.swift */,
 				5E2C09F8205423D80019888B /* AppDelegate.swift */,
 				5E2C09FA205423D80019888B /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				5E2C0A04205423D80019888B /* Info.plist */,
 			);
 			path = STBookTransition;
+			sourceTree = "<group>";
+		};
+		5E6824822054713B00994CF5 /* screenShot */ = {
+			isa = PBXGroup;
+			children = (
+				5E6824832054715B00994CF5 /* bookTransition.gif */,
+			);
+			path = screenShot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6824842054715B00994CF5 /* bookTransition.gif in Resources */,
 				5E2C0A03205423D80019888B /* LaunchScreen.storyboard in Resources */,
 				5E2C0A00205423D80019888B /* Assets.xcassets in Resources */,
 				5E2C09FE205423D80019888B /* Main.storyboard in Resources */,
