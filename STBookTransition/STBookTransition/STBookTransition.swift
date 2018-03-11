@@ -53,7 +53,7 @@ class STBookTransition: UIViewController {
     
     var delegate: BookTransitionDelegate?
     
-    func animateView(_ displayView:UIView, style:BookTransitionStyle, delay:Float, delegate:BookTransitionDelegate) {
+    func animateView(_ displayView:UIView, style:BookTransitionStyle, duration:Float, delegate:BookTransitionDelegate) {
         
         self.delegate = delegate
         let width = displayView.frame.size.width
@@ -204,7 +204,7 @@ class STBookTransition: UIViewController {
         displayView.backgroundColor = UIColor.clear
         
         var animation: CABasicAnimation = CABasicAnimation.init(keyPath: "transform.rotation.y")
-        animation.duration = CFTimeInterval(delay)
+        animation.duration = CFTimeInterval(duration)
         animation.autoreverses = false
         animation.repeatCount = 0
         
@@ -236,7 +236,7 @@ class STBookTransition: UIViewController {
         firstJointLayer!.add(animation, forKey: nil)
         
         animation = CABasicAnimation.init(keyPath: "transform.rotation.y")
-        animation.duration = CFTimeInterval(delay)
+        animation.duration = CFTimeInterval(duration)
         animation.autoreverses = false
         animation.repeatCount = 0
         
@@ -268,7 +268,7 @@ class STBookTransition: UIViewController {
         secondJointLayer!.add(animation, forKey: nil)
         
         animation = CABasicAnimation.init(keyPath: "opacity")
-        animation.duration = CFTimeInterval(delay)
+        animation.duration = CFTimeInterval(duration)
         animation.autoreverses = false
         animation.repeatCount = 0
         
@@ -298,7 +298,7 @@ class STBookTransition: UIViewController {
         case .RightFold:
             fallthrough
         case .LeftFold:
-            UIView.animate(withDuration: TimeInterval(delay), animations: {
+            UIView.animate(withDuration: TimeInterval(duration), animations: {
                 displayView.alpha = 0
             })
             
@@ -306,7 +306,7 @@ class STBookTransition: UIViewController {
             break
         }
         
-        self.perform(#selector(removeAllSubLayers), with: displayView, afterDelay: TimeInterval(delay))
+        self.perform(#selector(removeAllSubLayers), with: displayView, afterDelay: TimeInterval(duration))
     }
     
     func hideSubviewsInView(_ displayView:UIView, isHidden:Bool) {
