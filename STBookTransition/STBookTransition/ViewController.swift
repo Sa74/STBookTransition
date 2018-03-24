@@ -34,31 +34,32 @@ class ViewController: UIViewController, BookTransitionDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.bookTransition = STBookTransition()
+        self.bookTransition!.delegate = self
     }
 
     
     @IBAction func rightFoldTapped(_ sender: Any) {
         transitionStyle = .RightFold
-        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5, delegate: self)
+        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5)
     }
     
     @IBAction func rightUnfoldTapped(_ sender: Any) {
         self.displayView.alpha = 1.0
         self.displayView.isHidden = false
         transitionStyle = .RightUnfold
-        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5, delegate: self)
+        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5)
     }
     
     @IBAction func leftFoldTapped(_ sender: Any) {
         transitionStyle = .LeftFold
-        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5, delegate: self)
+        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5)
     }
     
     @IBAction func leftUnfoldTapped(_ sender: Any) {
         self.displayView.alpha = 1.0
         self.displayView.isHidden = false
         transitionStyle = .LeftUnfold
-        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5, delegate: self)
+        self.bookTransition?.animateView(displayView, style: transitionStyle, duration: 0.5)
     }
     
     func animationDidFinishWithView(displayView: UIView) {

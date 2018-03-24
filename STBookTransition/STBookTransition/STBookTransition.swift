@@ -28,15 +28,15 @@ import UIKit
 /*
  Book transition style options enum
  */
-enum BookTransitionStyle : Int {
+public enum BookTransitionStyle : Int {
     case None = 0, RightFold, RightUnfold, LeftFold, LeftUnfold
 }
 
 /*
  Cube transition delegate to handle animation completion
  */
-protocol BookTransitionDelegate: class {
-    func animationDidFinishWithView(displayView: UIView)
+@objc protocol BookTransitionDelegate: class {
+    @objc optional func animationDidFinishWithView(displayView: UIView)
 }
 
 
@@ -51,11 +51,10 @@ class STBookTransition: UIViewController {
     var secondJointLayer: CALayer?
     var perspectiveLayer: CALayer?
     
-    var delegate: BookTransitionDelegate?
+    public var delegate: BookTransitionDelegate?
     
-    func animateView(_ displayView:UIView, style:BookTransitionStyle, duration:Float, delegate:BookTransitionDelegate) {
+    public func animateView(_ displayView:UIView, style:BookTransitionStyle, duration:Float) {
         
-        self.delegate = delegate
         let width = displayView.frame.size.width
         let height = displayView.frame.size.height
         self.view.backgroundColor = displayView.backgroundColor
@@ -320,7 +319,7 @@ class STBookTransition: UIViewController {
     
     @objc func removeAllSubLayers(_ displayView: UIView) {
         
-        delegate?.animationDidFinishWithView(displayView: displayView)
+        delegate?.animationDidFinishWithView?(displayView: displayView)
         
         firstJointLayer?.removeFromSuperlayer()
         topSleeve?.removeFromSuperlayer()
