@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "STBookTransition"
   s.version      = "1.0"
-  s.summary      = "UIView Book animation"
+  s.summary      = "UIView Book Transition"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -27,8 +27,6 @@ Pod::Spec.new do |s|
   s.description  = "A custom view transition that provides 3D book fold and unfold animation for view display and hide"
 
   s.homepage     = "https://github.com/Sa74/STBookTransition"
-  s.swift_version = "4.0"
-
 
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -61,6 +59,8 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios, "9.0"
+  s.swift_version = "4.0"
+
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -68,7 +68,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/Sa74/STBookTransition.git", :commit => "1258d3a4713bd7cf30ee467358df491f9d2a45ae" }
+  s.source       = { :git => "https://github.com/Sa74/STBookTransition.git", :tag => "#{s.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -81,7 +81,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = "STBookTransition/STBookTransition/STBookTransition.swift"
   s.exclude_files = "Classes/Exclude"
-
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
