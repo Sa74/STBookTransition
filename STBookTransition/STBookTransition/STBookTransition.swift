@@ -35,12 +35,12 @@ public enum BookTransitionStyle : Int {
 /*
  Cube transition delegate to handle animation completion
  */
-@objc protocol BookTransitionDelegate: class {
+@objc public protocol BookTransitionDelegate: class {
     @objc optional func animationDidFinishWithView(displayView: UIView)
 }
 
 
-class STBookTransition: UIViewController {
+open class STBookTransition: UIViewController {
 
     var transform: CATransform3D? = CATransform3DIdentity
     var topSleeve: CALayer?
