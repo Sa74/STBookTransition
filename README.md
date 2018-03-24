@@ -18,7 +18,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'STBookTransition'
 ```
-You want to add pod 'STBookTransition', '~> 1.0' similar to the following to your Podfile:
+You want to add pod 'STBookTransition', '~> 1.1' similar to the following to your Podfile:
 
 ```
 target 'MyApp' do
