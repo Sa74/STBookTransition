@@ -22,7 +22,7 @@ You want to add pod 'STBookTransition', '~> 1.0' similar to the following to you
 
 ```
 target 'MyApp' do
-  pod 'STBookTransition', '~> 1.0'
+  pod 'STBookTransition', '~> 1.1'
   use_frameworks!
 end
 ```
