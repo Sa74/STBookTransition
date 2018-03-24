@@ -27,6 +27,7 @@ Pod::Spec.new do |s|
   s.description  = "A custom view transition that provides 3D book fold and unfold animation for view display and hide"
 
   s.homepage     = "https://github.com/Sa74/STBookTransition"
+  s.swift_version = "4.0"
 
 
 
