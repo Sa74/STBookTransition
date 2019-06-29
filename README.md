@@ -70,7 +70,7 @@ func animationDidFinishWithView(displayView: UIView) {
     }
 ```
 
-Here you go you are all setup for performing cool Cube Transition in you app 👍
+Here you go you are all setup for performing cool Book Transition in you app 👍
 
 ## Author
 
